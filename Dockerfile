@@ -7,7 +7,7 @@ ENV GOARM 7
 ENV GOOS linux
 RUN ["go", "build", "-o", "trafficlights", "."]
 
-FROM raspbian/jessie:latest
+FROM scratch
 WORKDIR /app
 COPY --from=builder /app/trafficlights /app
 CMD ["/app/trafficlights"]
