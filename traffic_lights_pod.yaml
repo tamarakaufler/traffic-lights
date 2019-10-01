@@ -6,7 +6,9 @@ metadata:
     app: traffic-lights
 spec:
   securityContext:
-    runAsUser: 0 
+    runAsUser: 1000
+    runAsGroup: 997
+    fsGroup: 15
   containers:
   - name: traffic-lights
     image: forbiddenforrest/traffic-lights:0.1.0-armv7
