@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic-lights
+  labels:
+    app: traffic-lights
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traffic-lights
+  template:
+    metadata:
+      name: traffic-lights
+      labels:
+        app: traffic-lights
+    spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 997
+        fsGroup: 15
+      containers:
+      - name: traffic-lights
+        image: forbiddenforrest/traffic-lights:0.1.0-armv7
+        securityContext:
+          privileged: true
