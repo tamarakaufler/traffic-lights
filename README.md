@@ -1,2 +1,3 @@
 # traffic-lights
-Activating traffic lights on Raspberry Pi with Go
+
+Activating containerized traffic lights (in Go) in Raspberry Pin cluster
