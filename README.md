@@ -1,3 +1,3 @@
 # traffic-lights
 
-Activating containerized traffic lights (in Go) in Raspberry Pin cluster
+Activating containerized traffic lights (in Go) in Raspberry Pi Kubernetes cluster
